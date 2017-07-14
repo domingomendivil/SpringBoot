@@ -2,9 +2,9 @@ package hello;
 
 import java.text.SimpleDateFormat;
 
+import javax.inject.Inject;
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,13 +18,13 @@ public class SampleController implements CommandLineRunner{
 	 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
-    @Autowired
+    @Inject
     DataSource dataSource;
     
-    @Autowired
+    @Inject
     CustomerRepository customerRepository;
     
-    @Autowired
+    @Inject
     UserRepository userRepository;
     
 
